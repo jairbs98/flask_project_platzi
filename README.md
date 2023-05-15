@@ -1,1 +1,1 @@
-# flask_project_platzy
+# flask_project_platzi
