@@ -29,7 +29,6 @@ def internal_server_error(error):
 def index():
     user_ip = request.remote_addr
     response = make_response(redirect('/hello'))
-    # response.set_cookie('user_ip', user_ip)
     session['user_ip'] = user_ip
     return response
 
