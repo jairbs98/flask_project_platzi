@@ -1,4 +1,4 @@
-from flask import Flask, request, make_response, redirect, render_template, session, url_for
+from flask import Flask, request, make_response, redirect, render_template, session, url_for, flash
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms.fields import StringField, PasswordField, SubmitField
@@ -14,7 +14,7 @@ app.config['SECRET_KEY'] = 'SUPER SECRETO'
 
 bootstrap = Bootstrap(app)
 
-todos = ['Carlon joto', 'Roberto gay', 'Angel chivo', 'Chap joto']
+todos = ['Carlon joto', 'Roberto gay', 'Angel chivo', 'Chap joto', 'Brandon pajero']
 
 
 class LoginForm(FlaskForm):
@@ -57,6 +57,8 @@ def hello():
     if login_form.validate_on_submit():
         username = login_form.username.data
         session['username'] = username
+
+        flash('Nombre de usuario registrado con éxito!')
 
         return redirect(url_for('index'))
 
