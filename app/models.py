@@ -14,7 +14,7 @@ class UserModel(UserMixin):
         :param user_data: UserData
         """
         self.id = user_data.username
-        self.id = user_data.password
+        self.password = user_data.password
 
     @staticmethod
     def query(user_id):
