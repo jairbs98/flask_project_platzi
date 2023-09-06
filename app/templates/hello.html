@@ -4,19 +4,25 @@
 
 {% block title %}
     {{ super() }}
-    Bienvenido
+    Welcome
 {% endblock %}
 
 {% block content %}
     {% if username %}
-        <h1>Bienvenido, {{ username | capitalize }}</h1>
+        <h1>Welcome, {{ username.split() | map('capitalize') | join(' ') }}</h1>
     {% endif %}
 
     {% if user_ip %}
-        <h3>Tu IP es: {{ user_ip }}</h3>
+        <h3>Your IP is: {{ user_ip }}</h3>
     {% else %}
-        <a href="{{ url_for('index') }}">Ir al inicio</a>
+        <a href="{{ url_for('index') }}">Go to home</a>
     {% endif %}
+
+    <div class="container">
+        <h2>Create a new task</h2>
+
+        {{ wtf.quick_form(todo_form) }}
+    </div>
 
     <ul>
         {% for todo in todos %}
