@@ -52,7 +52,7 @@ def hello():
     if todo_form.validate_on_submit():
         put_todo(user_id=username, description=todo_form.description.data)
 
-        flash('Tu tarea se creo con éxito!')
+        flash('Your task was created successfully!')
 
         return redirect(url_for('hello'))
 
