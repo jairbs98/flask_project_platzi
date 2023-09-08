@@ -3,5 +3,44 @@ html * {
 }
 
 img {
-    max-width: 30px;
+    max-width: 35px;
+}
+
+.navbar-custom {
+    background-color: #4F709C; /* Cambiar color de fondo */
+}
+
+.navbar-custom .nav > li > a {
+    color: #F0F0F0; /* Cambiar color del texto */
+}
+
+.navbar-custom .nav > li > a:hover {
+    background-color: #47658c;
+    color: #F0F0F0;
+}
+
+.custom-flash {
+    width: 300px; /* Cambia el ancho según tus necesidades */
+    height: auto; /* Permite que la altura se ajuste automáticamente al contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+    position: fixed; /* Cambia la posición del mensaje a fija */
+    top: 55px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    right: 20px; /* Centra horizontalmente el mensaje */
+    z-index: 1000; /* Ajusta la posición en la pila de capas si es necesario */
+    /* Agrega otros estilos según sea necesario */
+}
+
+.custom-flash .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.vertical-spacing {
+    margin-top: 10px; /* Adjust the value according to the desired amount of space */
+    margin-bottom: 10px; /* Adjust the value according to the desired amount of space */
 }
