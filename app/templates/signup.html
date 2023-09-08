@@ -6,9 +6,13 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Register an account</h1>
-
-    <div class="container">
-        {{ wtf.quick_form(signup_form) }}
+    <h1 class="align-center">
+        Register an account
+    </h1>
+    <div class="container vertical-spacing">
+        <div class="align-login">
+            {{ wtf.quick_form(signup_form) }}
+        </div>
     </div>
+
 {% endblock %}

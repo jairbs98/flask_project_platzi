@@ -4,13 +4,14 @@ from wtforms.validators import DataRequired
 
 
 class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Send')
+    username = StringField('Username', validators=[DataRequired()], render_kw={'class': 'custom-input'})
+    password = PasswordField('Password', validators=[DataRequired()], render_kw={'class': 'custom-input'})
+    submit = SubmitField('Send', render_kw={'class': 'custom-button'})
+
 
 
 class TodoForm(FlaskForm):
-    description = StringField('Description', validators=[DataRequired()])
+    description = StringField('Description', validators=[DataRequired()], render_kw={"autocomplete": "off"})
     submit = SubmitField('Create')
 
 
@@ -19,4 +20,4 @@ class DeleteTodoForm(FlaskForm):
 
 
 class UpdateTodoForm(FlaskForm):
-    submit = SubmitField('Update')
+    submit = SubmitField('Check')
