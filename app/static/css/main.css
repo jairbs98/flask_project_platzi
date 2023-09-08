@@ -27,7 +27,6 @@ img {
     top: 55px; /* Ajusta la distancia desde la parte superior según tus necesidades */
     right: 20px; /* Centra horizontalmente el mensaje */
     z-index: 1000; /* Ajusta la posición en la pila de capas si es necesario */
-    /* Agrega otros estilos según sea necesario */
 }
 
 .custom-flash .close {
@@ -41,6 +40,6 @@ img {
 }
 
 .vertical-spacing {
-    margin-top: 10px; /* Adjust the value according to the desired amount of space */
-    margin-bottom: 10px; /* Adjust the value according to the desired amount of space */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
